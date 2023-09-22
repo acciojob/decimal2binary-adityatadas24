@@ -10,6 +10,11 @@ function decimalToBinary(num) {
     }
     return binary;
 }
+const decimal = parseInt(prompt("Enter a decimal number:"));
+
+// Convert and display the binary representation
+const binary = decimalToBinary(decimal);
+console.log("Binary representation:", binary);
 
   
 
