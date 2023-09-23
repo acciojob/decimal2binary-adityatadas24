@@ -1,20 +1,24 @@
-function decimalToBinary(num) {
-  //Write you code here
-	 if (decimal === 0) {
-        return '0';
+function decimalToBinary(decimalNum) {
+    if (decimalNum === 0) {
+        return "0";
     }
-    let binary = '';
-    while (decimal > 0) {
-        binary = (decimal % 2) + binary;
-        decimal = Math.floor(decimal / 2);
-    }
-    return binary;
-}
-const decimal = parseInt(prompt("Enter a decimal number:"));
 
-// Convert and display the binary representation
-const binary = decimalToBinary(decimal);
-console.log("Binary representation:", binary);
+    let binaryNum = "";
+    while (decimalNum > 0) {
+        const remainder = decimalNum % 2;
+        binaryNum = remainder + binaryNum;
+        decimalNum = Math.floor(decimalNum / 2);
+    }
+
+    return binaryNum;
+}
+
+// Input
+const decimalInput = parseInt(prompt("Enter a decimal number:"));
+
+// Convert and Output
+const binaryOutput = decimalToBinary(decimalInput);
+console.log(`The binary equivalent of ${decimalInput} is: ${binaryOutput}`);
 
   
 
